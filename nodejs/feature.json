@@ -1,0 +1,91 @@
+{
+  "features": [
+    {
+      "name": "Flight Discount",
+      "feature_id": "discount-on-flight-booking",
+      "type": "NUMERIC",
+      "enabled_value": 5,
+      "disabled_value": 0,
+      "segment_rules": [
+        {
+          "rules": [
+            {
+              "segments": [
+                "segment_1614447939000"
+              ]
+            }
+          ],
+          "value": 25,
+          "order": 1
+        }
+      ],
+      "segment_exists": true,
+      "isEnabled": false
+    },
+    {
+      "name": "Flight Booking",
+      "feature_id": "flight-booking",
+      "type": "BOOLEAN",
+      "enabled_value": false,
+      "disabled_value": false,
+      "segment_rules": [
+        {
+          "rules": [
+            {
+              "segments": [
+                "segment_1614521211000"
+              ]
+            }
+          ],
+          "value": true,
+          "order": 1
+        }
+      ],
+      "segment_exists": true,
+      "isEnabled": true
+    },
+    {
+      "name": "Left Navigation",
+      "feature_id": "left-navigation-menu",
+      "type": "BOOLEAN",
+      "enabled_value": true,
+      "disabled_value": false,
+      "segment_rules": [],
+      "segment_exists": false,
+      "isEnabled": true
+    }
+  ],
+  "collection": {
+    "name": "Blue charge",
+    "collection_id": "blue-charge"
+  },
+  "segments": [
+    {
+      "name": "Production testers",
+      "segment_id": "segment_1614521211000",
+      "rules": [
+        {
+          "values": [
+            "alice@bluecharge.com",
+            "bob@bluecharge.com"
+          ],
+          "operator": "is",
+          "attribute_name": "email"
+        }
+      ]
+    },
+    {
+      "name": "IBM employees",
+      "segment_id": "segment_1614521208000",
+      "rules": [
+        {
+          "values": [
+            "ibm.com"
+          ],
+          "operator": "endsWith",
+          "attribute_name": "email"
+        }
+      ]
+    }
+  ]
+}
