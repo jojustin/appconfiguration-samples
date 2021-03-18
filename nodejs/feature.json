@@ -20,7 +20,7 @@
         }
       ],
       "segment_exists": true,
-      "isEnabled": true
+      "isEnabled": false
     },
     {
       "name": "Flight Booking",
